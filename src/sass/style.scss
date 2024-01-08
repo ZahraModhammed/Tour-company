@@ -1,0 +1,141 @@
+@import "./variuable.scss";
+@import "./mixies.scss";
+@font-face{
+    font-family:"cario";
+    src:url('../font/Cairo-Regular.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    font-family: "cario";
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    border-bottom: 1px solid #eee;
+    padding: 8px 16px;
+     box-shadow: 1px 2px 1px 0px #eee;
+    .navbar-brand{
+        img{
+            width: 50px;
+        }
+
+        span{
+            color: $main-color;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+
+    .navbar-toggler{
+        .icon{
+            color: $main-color;
+            font-size: 19px;
+        }
+    }
+
+    .navbar-nav{
+        .nav-item{
+            padding-left: 18px;
+            .nav-link{
+                color: rgb(163, 156, 156);
+                 font-size: 18px;
+                 transition: all .5s ease;
+                 &.active{
+                    color: $main-color;
+                    border-bottom: 1px solid $main-color;
+                 }
+                  
+                &:hover{
+                    color: $main-color;
+                }
+            }
+        }
+
+        .btn{
+            @include button($main-color, $second-color, $main-color) 
+        }
+    }
+}
+
+
+section{
+    &.about{
+        .landing{
+            background-image: url('../images/landing-1.jpg ');
+            background-position:center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+
+            .overlay{
+              width: 100%;
+              height: 100%;
+              background-color: rgba($color: #000000, $alpha: 0.3); 
+              position: relative;
+              .context{
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translate(50%,-50%);
+                text-align: center;
+                h2{
+                    color: $second-color;
+                    font-size: 40px;
+                }
+
+                p{
+                    color: $second-color;
+                    font-size: 19px;
+                    line-height: 1.5;
+                }
+
+              }
+            }
+
+        }
+        
+    }
+}
+
+@media (max-width: 992px){
+    .navbar-nav{
+        padding-top: 12px;
+        .nav-item{
+            padding-bottom: 10px;
+
+            .nav-link{
+                &.active{
+                    border-bottom: none !important;
+                 }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 768px){
+ section{
+    &.about{
+     .overlay{
+          .context{
+          h2{
+          
+            font-size: 25px !important;
+           }
+
+         p{
+            font-size: 16px !important;  
+         }
+
+        }
+      }
+   }
+}
+      
+
+   
+    
+}
