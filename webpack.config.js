@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
 
 
@@ -85,7 +84,7 @@ module.exports = {
     }),
     
     new MiniCssExtractPlugin({
-      filename:"css/style.css"
+      filename:"css/style.css",
     }),
    
   ],
