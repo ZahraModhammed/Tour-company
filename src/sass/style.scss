@@ -27,7 +27,7 @@ body{
     width: 35px;
     height: 3px;
     background-color: $btn-color;
-    top:49px;
+    top:59px;
     left:48%;
 }
 
@@ -167,6 +167,7 @@ section{
         padding-bottom: $sec-pb;
         background-color: #fcf7f7;
        .tour-content{
+        margin-left: 90px;
           .card{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             transition: all 0.5s ease;
@@ -198,6 +199,47 @@ section{
             }
           }
        }
+    }
+
+    &.contact{
+        padding-top: $sec-pt;
+        padding-bottom: $sec-pb;
+        .contact-info{
+            margin-top: 17px;
+            .icon{
+                color: $btn-color;
+                padding-left: 10px;
+                font-size: 20px;
+            }
+            span{
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+        .contact-form{
+            .input,textarea{
+                background-color: #eee;
+                &::placeholder{
+                    text-align: right;
+                    font-size: 20px;
+                }
+            }
+            textarea{
+                height: 200px; 
+            }
+            .btn{
+                position: relative;
+                button{
+                    @include button($btn-color,$second-color,$btn-color);
+                    width: fit-content;
+                    padding: 10px 30px;
+                    position: absolute;
+                    left: 10px;
+                 }
+            }
+            
+        }
     }
 }
 

@@ -46,8 +46,8 @@ module.exports = {
               publicPath:'../'
             },
           },
-            "css-loader",
-            "sass-loader",
+          "css-loader",
+          "sass-loader",
            
             ],
         },
@@ -78,6 +78,7 @@ module.exports = {
   },
 
   plugins: [
+
     new HtmlWebpackPlugin({
       template:"./src/index.html",
       filename:"index.html",
