@@ -21813,23 +21813,20 @@ section.services .content .cards .card {
   border-radius: 16px;
   transition: all 0.5s ease;
 }
-section.services .content .cards .card-body {
+section.services .content .cards .card .card-body {
   padding: 25px;
 }
-section.services .content .cards .card-body .icon {
+section.services .content .cards .card .card-body .icon {
   color: rgb(252, 153, 168);
   font-size: 29px;
   margin-bottom: 10px;
-  border: 1px solid rgb(252, 153, 168);
-  border-radius: 50px;
-  padding: 10px;
 }
-section.services .content .cards .card-body h5 {
+section.services .content .cards .card .card-body h5 {
   color: black;
   font-size: 20px;
   font-weight: bold;
 }
-section.services .content .cards .card-body p {
+section.services .content .cards .card .card-body p {
   color: rgb(113, 111, 111);
   font-size: 15px;
 }
@@ -21886,30 +21883,37 @@ section.contact {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.contact .contact-info {
-  margin-top: 17px;
+section.contact .map iframe {
+  width: 90%;
+  height: 200px;
 }
 section.contact .contact-info .icon {
   color: orange;
   padding-left: 10px;
+  font-size: 20px;
 }
 section.contact .contact-info span {
   font-weight: bold;
+  font-size: 20px;
 }
-section.contact .contact-form .input, section.contact .contact-form textarea {
+section.contact .form-contact {
+  width: 60%;
+  margin: 20px auto;
+}
+section.contact .form-contact .input, section.contact .form-contact textarea {
   background-color: #eee;
 }
-section.contact .contact-form .input::placeholder, section.contact .contact-form textarea::placeholder {
+section.contact .form-contact .input::placeholder, section.contact .form-contact textarea::placeholder {
   text-align: right;
   font-size: 20px;
 }
-section.contact .contact-form textarea {
+section.contact .form-contact textarea {
   height: 200px;
 }
-section.contact .contact-form .btn {
+section.contact .form-contact .btn {
   position: relative;
 }
-section.contact .contact-form .btn button {
+section.contact .form-contact .btn button {
   border: 1px solid orange;
   background-color: orange;
   padding: 10px 10px;
@@ -21920,9 +21924,32 @@ section.contact .contact-form .btn button {
   position: absolute;
   left: 10px;
 }
-section.contact .contact-form .btn button:hover {
+section.contact .form-contact .btn button:hover {
   background-color: white;
   color: orange;
+}
+
+footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 26px;
+}
+footer .icon {
+  color: white;
+  margin-left: 9px;
+  font-size: 18px;
+  border: 1px solid #eee;
+  padding: 14px;
+  transition: all 0.5s ease;
+}
+footer .icon:hover {
+  background-color: rgb(252, 153, 168);
+  color: black;
+}
+footer .copyright p {
+  font-size: 18px;
+  color: #eee;
+  text-align: left;
 }
 
 @media (max-width: 992px) {
@@ -21935,6 +21962,22 @@ section.contact .contact-form .btn button:hover {
   .navbar-nav .nav-item .nav-link.active {
     border-bottom: none !important;
   }
+  section.services .content .cards {
+    text-align: center;
+    margin: 0px 19px 15px;
+  }
+  section.services .content .image img {
+    display: none;
+  }
+  section.tour .tour-content {
+    margin-left: 20px;
+  }
+  section.contact .map iframe {
+    width: 100%;
+  }
+  section.contact .form-contact {
+    width: 90%;
+  }
 }
 @media (max-width: 768px) {
   section.about .overlay .context h2 {
@@ -21942,5 +21985,17 @@ section.contact .contact-form .btn button:hover {
   }
   section.about .overlay .context p {
     font-size: 16px !important;
+  }
+  section.services .cards .card {
+    margin: 0px auto;
+  }
+  section.tour .tour-content .card {
+    margin: 15px auto;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .copyright p {
+    text-align: center;
   }
 }

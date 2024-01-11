@@ -6,9 +6,11 @@ import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.min.js';
 import "../sass/style.scss";
 import '@fortawesome/fontawesome-free/js/all';
+import { data } from 'jquery';
 
 
 var link = document.querySelectorAll(".nav-link ");
+
 
 link.forEach(function (el){
     el.onclick = function(){
@@ -17,4 +19,6 @@ link.forEach(function (el){
         })
         this.classList.add("active")
     }
-})
+});
+
+var year = document.getElementById("year").innerHTML = new Date().getFullYear();

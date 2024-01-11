@@ -126,16 +126,13 @@ section{
             .card{
                 border-radius: 16px;
                  transition: all 0.5s ease;
-                
-                &-body{
+                .card-body{
                     padding: 25px;
+                    
                     .icon{
                         color: $main-color;
                         font-size: 29px;
                         margin-bottom: 10px;
-                        border: 1px solid $main-color;
-                        border-radius: 50px;
-                        padding: 10px;
                         
                     }
                     h5{
@@ -148,6 +145,8 @@ section{
                         color: rgb(113, 111, 111); 
                         font-size: 15px;
                     }
+
+                   
                 }
             }
         }
@@ -204,20 +203,27 @@ section{
     &.contact{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
-        .contact-info{
-            margin-top: 17px;
-            .icon{
-                color: $btn-color;
-                padding-left: 10px;
-                font-size: 20px;
+            .map{
+                iframe{
+                    width: 90%;
+                     height:200px;
+                }
             }
-            span{
-                font-weight: bold;
-                font-size: 20px;
-            }
-        }
-
-        .contact-form{
+             .contact-info{
+                .icon{
+                    color: $btn-color;
+                    padding-left: 10px;
+                    font-size: 20px;
+                }
+                span{
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+             } 
+       
+        .form-contact{
+             width:60%;
+              margin: 20px auto;
             .input,textarea{
                 background-color: #eee;
                 &::placeholder{
@@ -241,6 +247,35 @@ section{
             
         }
     }
+
+
+}
+
+footer{
+        width:100%;
+        background-color: #000000;
+        padding: 26px;
+
+        .icon{
+            color: $second-color;
+            margin-left: 9px;
+            font-size: 18px;
+            border: 1px solid #eee;
+            padding: 14px;
+            transition: all 0.5s ease;
+            &:hover{
+                background-color: $main-color;
+                color: black;
+            }
+        }
+
+        .copyright{
+            p{
+                font-size:18px ;
+                color: #eee;
+                text-align: left;
+            }   
+     } 
 }
 
 @media (max-width: 992px){
@@ -256,6 +291,42 @@ section{
             }
         }
         
+    }
+
+    section{
+        &.services{
+            .content{
+              
+                .cards{
+                    text-align: center;
+                    margin: 0px 19px 15px;
+                }
+                 
+                .image{
+                    img{
+                       display: none; 
+                   }
+               }
+            }
+        }
+
+        &.tour{
+           .tour-content{
+            margin-left: 20px;
+          }  
+        }
+
+        &.contact{
+            .map{
+                iframe{
+                    width: 100%; 
+                }
+            }
+
+            .form-contact{
+                width:90%;
+            }
+        }
     }
 }
 
@@ -276,9 +347,34 @@ section{
         }
       }
    }
-}
-      
+   &.services{
+    .cards{
+        .card{
+            margin: 0px auto;
+        }
+    }
+   }
 
-   
-    
+   &.tour{
+    .tour-content{
+        .card{
+            margin: 15px auto;
+        } 
+    }
+   }
+ 
 }
+
+footer{
+    text-align: center;
+    .copyright{
+        p{
+            text-align: center;
+        }
+       
+    }
+}
+  
+
+}  
+    
