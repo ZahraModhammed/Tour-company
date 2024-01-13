@@ -1,0 +1,98 @@
+
+$title-color: #4b320f;
+$line-color:#f8f399;
+
+
+section{
+    &.tour-landing{
+        background-image: url('../images/gallery-c5.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+       .overlay{
+         background-color: rgba($color: #000000, $alpha: 0.5);
+         width: 100%;
+         height: 100%;
+         position: relative;
+         .landing-content{
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%,-50%);
+            text-align: center;
+            h3{
+              color: $second-color;
+              font-size: 40px;
+            }
+       }
+    }
+    }
+    &.tour-descrtion{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        .tour-info{
+           padding: 20px;
+            h3{
+              color: #4b320f;
+              font-size: 25px;
+              font-weight: bold;
+               margin-bottom: 19px;
+              position: relative;
+              &::after{
+                content: "";
+                width: 135px;
+                height: 5px;
+                position: absolute;
+                bottom: -10px;
+                background-color: #f8f399;
+                right: 0px;
+              }
+            }
+
+            p{
+              font-size: 18px;
+                .more{
+                  display:none;
+                }
+                line-height: 1.6;
+            }
+        }
+        .image-dec{
+          position: relative;
+            &::before{
+              position: absolute;
+              content: "";
+              width: 50px;
+              height: 100px;
+              background-color: #f8f399;
+              z-index: -1;
+            }
+            
+         
+        }
+    }
+
+    &.gallery-tour{
+      padding-top: 100px;
+      padding-bottom: 100px;
+      .gallery-img{
+        margin:0px 29px 13px 0px;
+        border: 1px solid #eee;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 11px;
+        img{
+          width: 368px;
+          height: 300px;
+         max-width: 100%;
+        
+          &:hover{
+            transform: scale(1.1);
+            transition: all ease .35s;
+          }
+        }
+      }
+     
+    }
+
+}

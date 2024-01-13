@@ -25,6 +25,9 @@ module.exports = {
       }
   },
 
+  
+
+
   module:{
     rules:[
         {
@@ -83,7 +86,26 @@ module.exports = {
       template:"./src/index.html",
       filename:"index.html",
     }),
+
+    new HtmlWebpackPlugin({
+      template:"./src/tourOne.html",
+      filename:"tourOne.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template:"./src/tourTwo.html",
+      filename:"tourTwo.html",
+    }),
     
+    new HtmlWebpackPlugin({
+      template:"./src/login.html",
+      filename:"login.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      template:"./src/sign-up.html",
+      filename:"sign-up.html",
+    }),
     new MiniCssExtractPlugin({
       filename:"css/style.css",
     }),

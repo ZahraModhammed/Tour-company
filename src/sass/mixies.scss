@@ -10,3 +10,80 @@
       color:$background-color;
     }
 }
+
+@mixin title-tour{
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  z-index: 1;
+  transition: 0.3s;
+  &::after,&::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: $color-line-two;
+    border-radius: 50%;
+    top: 50%;
+   transform: translateY(-50%);
+  }
+  
+  &::after{
+      left: -30px;
+  }
+
+  &::before{
+      right: -30px;
+  }
+
+  &:hover{
+      color: white;
+      border: 2px solid white;
+     transition-delay: 0.5s;
+     &::before{
+      z-index: -1;
+      animation: right-move 0.5s linear forwards;
+
+     }
+
+     &::after{
+      z-index: -1;
+      animation: left-move 0.5s linear forwards;
+     }
+  }
+
+  @keyframes left-move{
+    50%{
+        left: 0;
+        width: 12px;
+        height: 12px;
+
+    }
+
+    100%{
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+        left: 0;
+    }
+ }
+
+@keyframes right-move{
+    50%{
+        right: 0;
+        width: 12px;
+        height: 12px;
+
+    }
+
+    100%{
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+        right: 0;
+    }
+ }
+}

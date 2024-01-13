@@ -21699,11 +21699,247 @@ textarea.form-control-lg {
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
   \**************************************************************************************************************/
+section.tour-landing {
+  background-image: url(../images/gallery-c5..jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+section.tour-landing .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section.tour-landing .overlay .landing-content {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+section.tour-landing .overlay .landing-content h3 {
+  color: white;
+  font-size: 40px;
+}
+section.tour-descrtion {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+section.tour-descrtion .tour-info {
+  padding: 20px;
+}
+section.tour-descrtion .tour-info h3 {
+  color: #4b320f;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 19px;
+  position: relative;
+}
+section.tour-descrtion .tour-info h3::after {
+  content: "";
+  width: 135px;
+  height: 5px;
+  position: absolute;
+  bottom: -10px;
+  background-color: #f8f399;
+  right: 0px;
+}
+section.tour-descrtion .tour-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+section.tour-descrtion .tour-info p .more {
+  display: none;
+}
+section.tour-descrtion .image-dec {
+  position: relative;
+}
+section.tour-descrtion .image-dec::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 100px;
+  background-color: #f8f399;
+  z-index: -1;
+}
+section.gallery-tour {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.gallery-tour .gallery-img {
+  margin: 0px 29px 13px 0px;
+  border: 1px solid #eee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 11px;
+}
+section.gallery-tour .gallery-img img {
+  width: 368px;
+  height: 300px;
+  max-width: 100%;
+}
+section.gallery-tour .gallery-img img:hover {
+  transform: scale(1.1);
+  transition: all ease 0.35s;
+}
+
+.tour-title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  z-index: 1;
+  transition: 0.3s;
+  border-color: rgb(137, 239, 137);
+}
+.tour-title::after, .tour-title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(249, 115, 137);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tour-title::after {
+  left: -30px;
+}
+.tour-title::before {
+  right: -30px;
+}
+.tour-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+.tour-title:hover::before {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.tour-title:hover::after {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+    left: 0;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+    right: 0;
+  }
+}
+.tour-title::before, .tour-title::after {
+  background-color: rgb(249, 115, 137);
+}
+
+section.tour-landing {
+  background-image: url(../images/gallery-t3..jpg);
+}
+section.tour-dec {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.tour-dec .tour-two-info {
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0px 1px 7px 2px #ddd;
+}
+section.tour-dec .tour-two-info h3 {
+  color: rgb(137, 239, 137);
+  position: relative;
+  margin-bottom: 20px;
+}
+section.tour-dec .tour-two-info h3::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 4px;
+  background-color: rgb(249, 115, 137);
+  bottom: -9px;
+  right: 0;
+}
+section.tour-dec .tour-two-info p {
+  color: #000;
+  line-height: 1.5;
+}
+section.tour-dec .tour-two-info button {
+  border: 1px solid rgb(137, 239, 137);
+  background-color: rgb(137, 239, 137);
+  padding: 10px 10px;
+  color: white;
+  border-radius: 10px;
+}
+section.tour-dec .tour-two-info button:hover {
+  background-color: white;
+  color: rgb(137, 239, 137);
+}
+section.tour-dec .image {
+  position: relative;
+  text-align: center;
+}
+section.tour-dec .image::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: calc(100% + 100px);
+  z-index: -1;
+  background-color: rgb(137, 239, 137);
+  left: 0;
+  top: -50px;
+}
+section.tour-dec .image img {
+  width: 260px;
+  height: 350px;
+}
+section.tour-place {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f9f7f7;
+}
+section.tour-place .content-place {
+  border: 1px solid #b5b2b2;
+  padding: 28px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+section.tour-place .content-place:hover {
+  background-color: rgb(249, 115, 137);
+  color: white !important;
+}
+section.tour-place .content-place h4 {
+  font-size: 20px;
+}
+section.tour-place .content-place p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 @font-face {
   font-family: "cario";
   src: url(.././fonts/Cairo-Regular.ttf);
-  font-weight: bold;
-  font-style: normal;
 }
 body {
   font-family: "cario";
