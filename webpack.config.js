@@ -26,9 +26,17 @@ module.exports = {
   },
 
   
-
+  resolve: {
+    alias: {
+        jquery: "jquery/src/jquery"
+    }
+},
 
   module:{
+  
+      
+    
+
     rules:[
         {
             test: /\.html$/i,
@@ -38,6 +46,11 @@ module.exports = {
                 // sources:false
               },
           },
+
+          
+           
+            
+          
 
           {
             test:  /\.(sass|css|scss)$/,
@@ -81,6 +94,7 @@ module.exports = {
   },
 
   plugins: [
+  
 
     new HtmlWebpackPlugin({
       template:"./src/index.html",
@@ -109,7 +123,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename:"css/style.css",
     }),
+
+  //     new webpack.ProvidePlugin({
+  //     $: "jquery",
+  //     jQuery: "jquery"
+  // }),
    
   ],
-
+  
+  
 }

@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة سفرني السياحية|جولة في مصر </title>
+    <style>
+      button{
+        position: fixed;
+        bottom: 13px;
+        right: 13px;
+        display: none;
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -28,6 +36,7 @@
       </nav>
     </header>
      <main>
+       <button id="Up">up</button>
         <section class="tour-landing">
             <div class="overlay">
                      <div class="landing-content">
@@ -39,7 +48,7 @@
           <section class="tour-descrtion">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div class="tour-info">
                             <h3>نبذة عن الرحلة</h3>
                             <p>
@@ -50,10 +59,10 @@
                                 وهي مقابر ملكية كل منها يحمل اسم الملك الذي بناه والذي دفن فيه.
                                  وأفضل الأنشطة التي يمكنكم القيام بها في هذه الرحلة<span id="dots">...</span><span class="more">يمكنكم الاستمتاع بجولة على ظهر الجمل، إذ تستطيعوا استئجار جمل والقيام بجولة حول هذه الأهرامات لتروا ضخامتها وعظمة بناء هذه الأهرامات قبل آلاف السنين، وتستطيعوا التقاط أجمل الصور التذكارية هناك</span>.
                             </p>
-                            <button id="Btn">اقرا المزيد</button>
+                            <input type="button" id="Btn" value="قراءة المزيد"></input>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4 offset-lg-1">
                         <div class="image-dec">
                             <img src="images/tour-desc1.jpg" height="300px"  alt="">
                         </div>
@@ -67,46 +76,35 @@
                   الاماكن الرحلة
                 </h3>
                  <div class="row ">
-                    <div class=" col-lg-3 col-md-6">
-                        <div class="gallery-img">
-                          <img src="images/gallery-c1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c2.jpg" alt="">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-c8.jpg" />
                       </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c3.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c4.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c5.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c6.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c7.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-c8.jpg" alt="">
-                      </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
                  </div>
               </div>
           </section>

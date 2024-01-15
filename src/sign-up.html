@@ -35,30 +35,42 @@
  <main>
     <div class="container py-5 h-170">
         <div class="row d-flex align-items-center justify-content-center h-100">
-             <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form action="login.html">
+             <div class="col-md-7 col-lg-5 col-xl-5 form-content">
+                    <form action="login.html" class="needs-validation" novalidate>
                         <div class="mb-4">
-                            <input type="text"  id="text"  class="form-control form-control-lg" required>
-                            <label for="text" class="form-label">الاسم</label>
+                          <label for="Name" class="form-label mb-1">الاسم</label>
+                          <input type="text"  id="Name"  class="form-control form-control-lg"  required>
+                          <div class="invalid-feedback">
+                            هذا الحقل مطلوب
+                          </div>
                           </div>
                         <div class="mb-4">
-                            <input type="date"  id="date"  class="form-control form-control-lg" required>
-                            <label for="date" class="form-label">تاريخ الميلاد</label>
+                          <label for="date" class="form-label mb-1">تاريخ الميلاد</label>
+                          <input type="date"  id="date"  class="form-control form-control-lg" required>
+                          <div class="invalid-feedback">
+                            هذا الحقل مطلوب
+                          </div>
                           </div>
                         <div class="mb-4">
+                          <label for="email" class="form-label mb-1">البريد الالكتروني</label>
                             <input type="email"  id="email"  class="form-control form-control-lg" required>
-                            <label for="email" class="form-label">البريد الالكتروني</label>
+                            <div class="invalid-feedback">
+                              هذا الحقل مطلوب
+                            </div>
                           </div>
                         <div class="mb-4">
+                          <label for="password" class="form-label mb-1">كلمة المرور</label>
                          <input type="password"  id="password"  class="form-control form-control-lg" required>
-                         <label for="password" class="form-label">كلمة المرور</label>
+                         <div class="invalid-feedback">
+                          هذا الحقل مطلوب
+                        </div>
                        </div>
                        <div class="mb-3 d-flex ">
-                         <button class="btn">انشاء حساب جديد</button>
-                           <span><a href="login.html">هل لديك حساب؟</a></span>
+                         <button class="btn-in" type="submit">انشاء حساب جديد</button>
+                           <a href="login.html" class="me-2 mt-2 link">هل لديك حساب؟</a>
                        </div>
                      </form>
-             </div>
+                 </div>
              <div class="col-md-8 col-lg-7 col-xl-6">
                 <img src="images/sign.jpg" alt="" class="img-fluid">
              </div>

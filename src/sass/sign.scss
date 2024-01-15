@@ -1,0 +1,33 @@
+.form-content{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    .form-control{
+       &:focus{
+        border-color: $main-color !important;
+        box-shadow: none !important;
+       }
+    }
+   
+    .form-label{
+        color: $main-color;
+        font-weight: bold;
+    }
+
+    .btn-in{
+        @include button($btn-color,$second-color, $btn-color);
+        
+    }
+
+    .link{
+        color: $btn-color;
+    }
+}
+
+
+@media(max-width:992px){
+    .form-content{
+      order: 2;
+    }
+
+}

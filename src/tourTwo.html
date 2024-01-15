@@ -28,9 +28,10 @@
       </nav>
     </header>
      <main>
-        <section class="tour-landing">
+      <button id="Up"><i class="fa-solid fa-arrow-up"></i></button>
+        <section class="tour-two-landing">
             <div class="overlay">
-                     <div class="landing-content">
+                     <div class="landing-two-content">
                         <h3>رحلة إلى مدينة إسطنبول في تركيا</h3>
                      </div>
                  </div>
@@ -46,9 +47,9 @@
                                 إسطنبول هي واحدة من أكبر و أجمل مدن تركيا وهي مصنفة ضمن أكثر المدن السياحية جذباً للسياح في العالم وتُعتبر إسطنبول الخيار الأول للسياح الذين يفكرون في الذهاب إلى تركيا.
                             </p>
                             <p>
-                              وتعتبر مدينة إسطنبول من أهم المدن السياحية في العالم، حيث احتلت المرتبة الثامنة في قائمة أكثر المدن زيارة في العالم. وبسبب الموقع الجغرافي المميز جداً للمدينة وربطها بين قارتي اسيا وأوروبا ساعد ذلك كثيراً في النمو السريع لقطاع السياحة،
+                              وتعتبر مدينة إسطنبول من أهم المدن السياحية في العالم، حيث احتلت المرتبة الثامنة<span id="dots">...</span> <span class="more" >في قائمة أكثر المدن زيارة في العالم. وبسبب الموقع الجغرافي المميز جداً للمدينة وربطها بين قارتي اسيا وأوروبا ساعد ذلك كثيراً في النمو السريع لقطاع السياحة،</span>
                             </p>
-                            <button id="more">قراءة المزيد</button>
+                            <input type="button" id="Btn" value="قراءة المزيد"></input>
                         </div>
                     </div>
                     <div class="col-md-4 offset-lg-1">
@@ -101,52 +102,42 @@
                     </div>
                 </div>
              </section>
-          <section class="gallery-tour">
+          <section class="gallery-tour-two">
               <div class="container">
                 <h3 class="tour-title">
                   الاماكن الرحلة
                 </h3>
                  <div class="row ">
-                    <div class=" col-lg-3 col-md-6">
-                        <div class="gallery-img">
-                          <img src="images/gallery-t1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t2.jpg" alt="">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/gallery-t8.jpg" />
                       </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t3.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t4.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t5.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t6.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t7.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                      <div class="gallery-img">
-                        <img src="images/gallery-t8.jpg" alt="">
-                      </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                     
                  </div>
               </div>
           </section>

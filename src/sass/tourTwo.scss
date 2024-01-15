@@ -9,12 +9,43 @@ $color-line-two:rgb(249, 115, 137);
     }
  }
 
+ #Up{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border: none;
+    padding: 10px;
+    background-color: $main-color;
+    color: $second-color;
+    display: none;
+ }
+
 
 section{
    
-
-    &.tour-landing{
+    &.tour-two-landing{
        background-image: url(../images/gallery-t3.jpg);
+       background-position: center center;
+       background-repeat: no-repeat;
+       background-size: cover;
+       height: 400px;
+       .overlay{
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .landing-two-content{
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(50%,-50%);
+            text-align: center;
+            h3{
+                color: $second-color;
+                font-size: 40px;
+              }
+        }
+       }
     }
 
     &.tour-dec{
@@ -41,10 +72,10 @@ section{
             }
              p{
                 color:#000;
-                line-height: 1.5;
+                line-height: 1.6;
              }
 
-             button{
+             #Btn{
                 @include button($color-title-two,$second-color,$color-title-two);
                
              }
@@ -68,6 +99,7 @@ section{
                 height: 350px;
             }
         }
+
     }
 
     &.tour-place{
@@ -79,12 +111,15 @@ section{
                 padding: 28px;
                 text-align: center;
                 transition: all 0.3s ease;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 &:hover{
                     background-color: $color-line-two;
                     color: white !important;
                 }
                 h4{
-                  font-size: 20px;
+                  font-size: 20px; 
+                  border-bottom: 2px solid $color-title-two;
+                  padding-bottom: 12px;
                 }
 
                 p{
@@ -94,6 +129,33 @@ section{
                 }
             }
         
+    }
+
+    &.gallery-tour-two{
+        padding-top: $sec-pt;
+        padding-bottom: $sec-pb;
+        .swiper{
+            &-slide {
+                img {
+                    display: block;
+                    width: 100%;
+                  }
+              }
+
+             &-pagination{
+                bottom:-5px;
+                &-bullet{
+                    background-color: $color-title-two !important;
+                    width: 20px;
+                    height: 20px;
+                    margin: 10px;
+                }
+            
+          }
+        }
+        
+      
+          
     }
 
    
