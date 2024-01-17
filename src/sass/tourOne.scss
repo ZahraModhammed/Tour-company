@@ -1,6 +1,6 @@
 
 $title-color: #4b320f;
-$line-color:#f8f399;
+$line-color:#f8ef42;
 
 
 section{
@@ -79,34 +79,91 @@ section{
             width: 260px;
             height: 350px;
         }
-        }
+      } 
     }
 
     &.gallery-tour{
       padding-top: 100px;
       padding-bottom: 100px;
+
+      .tour-title{
+        @include title-tour;
+        border-color: $title-color;
+        &::before,&::after{
+            background-color: $line-color;
+        }
+     }
      
-      .swiper{
+      .swiper {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0 50px;
+
         &-slide {
-            img {
-                display: block;
-                width: 100%;
-                margin-bottom: 9px;
-              }
+          img{
+            max-height: 250px;
+            width: 100%;
+            object-fit:cover ;
+          }
           }
 
-         &-pagination{
-            bottom:-6px;
+          &-pagination{
+            bottom: -5px;
             &-bullet{
-                background-color: $title-color !important;
-                width: 18px;
-                height: 18px;
+                background-color: $line-color;
+                width: 20px;
+                height: 20px;
                 margin: 10px;
             }
-        
+          }
+      } 
+     
+    }
+
+}
+
+@media(max-width:991px){
+   section{
+    &.tour-descrtion{
+      .image-dec{
+        display: none;
       }
     }
      
+    &.gallery-tour{
+      .tour-title{
+        @include title-tour;
+        border-color: $title-color;
+        font-size: 30px;
+        &::before,&::after{
+            background-color: $line-color;
+        }
+     }
+     .swiper{
+      width: 70%;
+      height: 70%;
+       
+      } 
     }
+   }
+  
+}
 
+@media(max-width:767px){
+
+  section{
+    &.tour-landing{
+      .overlay{
+        .landing-content{
+        
+          h3{
+            font-size: 30px;
+           }
+        }
+      }
+      
+    }
+  }
+ 
+ 
 }

@@ -21786,102 +21786,97 @@ section.gallery-tour {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.gallery-tour .swiper-slide img {
-  display: block;
-  width: 100%;
-  margin-bottom: 9px;
-}
-section.gallery-tour .swiper-pagination {
-  bottom: -6px;
-}
-section.gallery-tour .swiper-pagination-bullet {
-  background-color: #4b320f !important;
-  width: 18px;
-  height: 18px;
-  margin: 10px;
-}
-
-.tour-title {
+section.gallery-tour .tour-title {
   width: fit-content;
   border: 2px solid black;
   position: relative;
   margin: 0px auto 60px;
   font-size: 36px;
   padding: 10px 20px;
-  z-index: 1;
-  transition: 0.3s;
-  border-color: rgb(137, 239, 137);
+  border-color: #4b320f;
 }
-.tour-title::after, .tour-title::before {
+section.gallery-tour .tour-title::after, section.gallery-tour .tour-title::before {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: rgb(249, 115, 137);
+  background-color: green;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
 }
-.tour-title::after {
+section.gallery-tour .tour-title::after {
   left: -30px;
 }
-.tour-title::before {
+section.gallery-tour .tour-title::before {
   right: -30px;
 }
-.tour-title:hover {
-  color: white;
-  border: 2px solid white;
-  transition-delay: 0.5s;
+section.gallery-tour .tour-title::before, section.gallery-tour .tour-title::after {
+  background-color: #f8ef42;
 }
-.tour-title:hover::before {
-  z-index: -1;
-  animation: right-move 0.5s linear forwards;
+section.gallery-tour .swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 50px;
 }
-.tour-title:hover::after {
-  z-index: -1;
-  animation: left-move 0.5s linear forwards;
+section.gallery-tour .swiper-slide img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
-@keyframes left-move {
-  50% {
-    left: 0;
-    width: 12px;
-    height: 12px;
-  }
-  100% {
-    border-radius: 0;
-    width: 50%;
-    height: 100%;
-    left: 0;
-  }
+section.gallery-tour .swiper-pagination {
+  bottom: -5px;
 }
-@keyframes right-move {
-  50% {
-    right: 0;
-    width: 12px;
-    height: 12px;
-  }
-  100% {
-    border-radius: 0;
-    width: 50%;
-    height: 100%;
-    right: 0;
-  }
-}
-.tour-title::before, .tour-title::after {
-  background-color: rgb(249, 115, 137);
+section.gallery-tour .swiper-pagination-bullet {
+  background-color: #f8ef42;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
 }
 
-#Up {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  border: none;
-  padding: 10px;
-  background-color: rgb(252, 153, 168);
-  color: white;
-  display: none;
+@media (max-width: 991px) {
+  section.tour-descrtion .image-dec {
+    display: none;
+  }
+  section.gallery-tour .tour-title {
+    width: fit-content;
+    border: 2px solid black;
+    position: relative;
+    margin: 0px auto 60px;
+    font-size: 36px;
+    padding: 10px 20px;
+    border-color: #4b320f;
+    font-size: 30px;
+  }
+  section.gallery-tour .tour-title::after, section.gallery-tour .tour-title::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  section.gallery-tour .tour-title::after {
+    left: -30px;
+  }
+  section.gallery-tour .tour-title::before {
+    right: -30px;
+  }
+  section.gallery-tour .tour-title::before, section.gallery-tour .tour-title::after {
+    background-color: #f8ef42;
+  }
+  section.gallery-tour .swiper {
+    width: 70%;
+    height: 70%;
+  }
 }
-
+@media (max-width: 767px) {
+  section.tour-landing .overlay .landing-content h3 {
+    font-size: 30px;
+  }
+}
 section.tour-two-landing {
   background-image: url(../images/gallery-t3..jpg);
   background-position: center center;
@@ -21917,16 +21912,18 @@ section.tour-dec .tour-two-info {
   box-shadow: 0px 1px 7px 2px #ddd;
 }
 section.tour-dec .tour-two-info h3 {
-  color: rgb(137, 239, 137);
+  color: rgb(114, 248, 114);
   position: relative;
   margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 section.tour-dec .tour-two-info h3::after {
   content: "";
   position: absolute;
   width: 150px;
   height: 4px;
-  background-color: rgb(249, 115, 137);
+  background-color: rgb(255, 65, 97);
   bottom: -9px;
   right: 0;
 }
@@ -21935,15 +21932,16 @@ section.tour-dec .tour-two-info p {
   line-height: 1.6;
 }
 section.tour-dec .tour-two-info #Btn {
-  border: 1px solid rgb(137, 239, 137);
-  background-color: rgb(137, 239, 137);
+  border: 1px solid rgb(114, 248, 114);
+  background-color: rgb(114, 248, 114);
   padding: 10px 10px;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 section.tour-dec .tour-two-info #Btn:hover {
   background-color: white;
-  color: rgb(137, 239, 137);
+  color: rgb(114, 248, 114);
 }
 section.tour-dec .image {
   position: relative;
@@ -21955,7 +21953,7 @@ section.tour-dec .image::before {
   width: 80px;
   height: calc(100% + 100px);
   z-index: -1;
-  background-color: rgb(137, 239, 137);
+  background-color: rgb(114, 248, 114);
   left: 0;
   top: -50px;
 }
@@ -21968,6 +21966,34 @@ section.tour-place {
   padding-bottom: 100px;
   background-color: #f9f7f7;
 }
+section.tour-place .tour-title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  border-color: rgb(114, 248, 114);
+}
+section.tour-place .tour-title::after, section.tour-place .tour-title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.tour-place .tour-title::after {
+  left: -30px;
+}
+section.tour-place .tour-title::before {
+  right: -30px;
+}
+section.tour-place .tour-title::before, section.tour-place .tour-title::after {
+  background-color: rgb(255, 65, 97);
+}
 section.tour-place .content-place {
   border: 1px solid #b5b2b2;
   padding: 28px;
@@ -21976,12 +22002,12 @@ section.tour-place .content-place {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 section.tour-place .content-place:hover {
-  background-color: rgb(249, 115, 137);
+  background-color: rgb(255, 65, 97);
   color: white !important;
 }
 section.tour-place .content-place h4 {
   font-size: 20px;
-  border-bottom: 2px solid rgb(137, 239, 137);
+  border-bottom: 2px solid rgb(114, 248, 114);
   padding-bottom: 12px;
 }
 section.tour-place .content-place p {
@@ -21992,32 +22018,106 @@ section.gallery-tour-two {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.gallery-tour-two .swiper-slide img {
-  display: block;
+section.gallery-tour-two .tour-title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  border-color: rgb(114, 248, 114);
+}
+section.gallery-tour-two .tour-title::after, section.gallery-tour-two .tour-title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.gallery-tour-two .tour-title::after {
+  left: -30px;
+}
+section.gallery-tour-two .tour-title::before {
+  right: -30px;
+}
+section.gallery-tour-two .tour-title::before, section.gallery-tour-two .tour-title::after {
+  background-color: rgb(255, 65, 97);
+}
+section.gallery-tour-two .swiper {
   width: 100%;
+  height: 100%;
+  padding: 20px 0 50px;
+}
+section.gallery-tour-two .swiper-slide img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 section.gallery-tour-two .swiper-pagination {
   bottom: -5px;
 }
 section.gallery-tour-two .swiper-pagination-bullet {
-  background-color: rgb(137, 239, 137) !important;
+  background-color: rgb(255, 65, 97);
   width: 20px;
   height: 20px;
   margin: 10px;
 }
 
-.form-content {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
+@media (max-width: 991px) {
+  section.tour-dec .image {
+    display: none;
+  }
+  section.tour-place .content-place {
+    margin-bottom: 15px;
+  }
+  section.gallery-tour-two .swiper {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media (max-width: 767px) {
+  section.tour-two-landing .overlay .landing-two-content h3 {
+    font-size: 30px;
+  }
+  section.gallery-tour-two .tour-title, section.tour-place .tour-title {
+    width: fit-content;
+    border: 2px solid black;
+    position: relative;
+    margin: 0px auto 60px;
+    font-size: 36px;
+    padding: 10px 20px;
+    border-color: rgb(114, 248, 114);
+    font-size: 30px;
+  }
+  section.gallery-tour-two .tour-title::after, section.gallery-tour-two .tour-title::before, section.tour-place .tour-title::after, section.tour-place .tour-title::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  section.gallery-tour-two .tour-title::after, section.tour-place .tour-title::after {
+    left: -30px;
+  }
+  section.gallery-tour-two .tour-title::before, section.tour-place .tour-title::before {
+    right: -30px;
+  }
+  section.gallery-tour-two .tour-title::before, section.gallery-tour-two .tour-title::after, section.tour-place .tour-title::before, section.tour-place .tour-title::after {
+    background-color: rgb(255, 65, 97);
+  }
 }
 .form-content .form-control:focus {
-  border-color: rgb(252, 153, 168) !important;
+  border-color: rgb(250, 112, 133) !important;
   box-shadow: none !important;
 }
 .form-content .form-label {
-  color: rgb(252, 153, 168);
-  font-weight: bold;
+  color: rgb(250, 112, 133);
 }
 .form-content .btn-in {
   border: 1px solid orange;
@@ -22034,9 +22134,84 @@ section.gallery-tour-two .swiper-pagination-bullet {
   color: orange;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .form-content {
     order: 2;
+  }
+}
+section.travel-tour-landing {
+  background-image: url(../images/landing-2..jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+section.travel-tour-landing .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section.travel-tour-landing .overlay .tour-content {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+section.travel-tour-landing .overlay .tour-content p {
+  color: white;
+  font-size: 30px;
+}
+section.travel-tours {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.travel-tours .card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.5s ease;
+  margin-bottom: 30px;
+}
+section.travel-tours .card img {
+  height: 260px;
+}
+section.travel-tours .card:hover {
+  transform: translateY(-19px);
+}
+section.travel-tours .card .card-body {
+  padding: 27px;
+  position: relative;
+}
+section.travel-tours .card .card-body .card-title {
+  font-size: 20px;
+  color: black;
+  margin-top: 28px;
+}
+section.travel-tours .card .card-body .price {
+  position: absolute;
+  border: 1px solid orange;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  left: 25px;
+  top: 0px;
+}
+section.travel-tours .card .card-body .btn {
+  border: 1px solid rgb(250, 112, 133);
+  background-color: rgb(250, 112, 133);
+  padding: 10px 10px;
+  color: white;
+  border-radius: 10px;
+}
+section.travel-tours .card .card-body .btn:hover {
+  background-color: white;
+  color: rgb(250, 112, 133);
+}
+
+@media (max-width: 767px) {
+  section.travel-tours .card {
+    margin: 0px auto 15px;
   }
 }
 @font-face {
@@ -22049,24 +22224,6 @@ body {
   margin: 0;
 }
 
-.title {
-  text-align: center;
-  font-size: 39px;
-  color: black;
-  position: relative;
-  margin-bottom: 80px;
-}
-
-.title::after {
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 3px;
-  background-color: orange;
-  top: 59px;
-  left: 48%;
-}
-
 .navbar {
   border-bottom: 1px solid #eee;
   padding: 8px 16px;
@@ -22076,12 +22233,11 @@ body {
   width: 50px;
 }
 .navbar .navbar-brand span {
-  color: rgb(252, 153, 168);
-  font-weight: bold;
+  color: rgb(250, 112, 133);
   font-size: 30px;
 }
 .navbar .navbar-toggler .icon {
-  color: rgb(252, 153, 168);
+  color: rgb(250, 112, 133);
   font-size: 19px;
 }
 .navbar .navbar-nav .nav-item {
@@ -22093,22 +22249,35 @@ body {
   transition: all 0.5s ease;
 }
 .navbar .navbar-nav .nav-item .nav-link.active {
-  color: rgb(252, 153, 168);
-  border-bottom: 1px solid rgb(252, 153, 168);
+  color: rgb(250, 112, 133);
+  border-bottom: 1px solid rgb(250, 112, 133);
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  color: rgb(252, 153, 168);
+  color: rgb(250, 112, 133);
 }
-.navbar .navbar-nav .btn {
-  border: 1px solid rgb(252, 153, 168);
-  background-color: rgb(252, 153, 168);
+.navbar .navbar-nav .btn-one {
+  border: 1px solid rgb(250, 112, 133);
+  background-color: rgb(250, 112, 133);
   padding: 10px 10px;
   color: white;
   border-radius: 10px;
+  text-decoration: none;
 }
-.navbar .navbar-nav .btn:hover {
+.navbar .navbar-nav .btn-one:hover {
   background-color: white;
-  color: rgb(252, 153, 168);
+  color: rgb(250, 112, 133);
+}
+
+#Up {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border: none;
+  padding: 20px;
+  background-color: orange;
+  color: white;
+  display: none;
+  z-index: 2;
 }
 
 section.about .landing {
@@ -22116,7 +22285,7 @@ section.about .landing {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 450px;
 }
 section.about .landing .overlay {
   width: 100%;
@@ -22144,41 +22313,92 @@ section.services {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.services .content .cards {
-  margin-bottom: 19px;
+section.services .title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  border-color: rgb(250, 112, 133);
 }
-section.services .content .cards .card {
-  border-radius: 16px;
-  transition: all 0.5s ease;
+section.services .title::after, section.services .title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
-section.services .content .cards .card .card-body {
-  padding: 25px;
+section.services .title::after {
+  left: -30px;
 }
-section.services .content .cards .card .card-body .icon {
-  color: rgb(252, 153, 168);
-  font-size: 29px;
+section.services .title::before {
+  right: -30px;
+}
+section.services .title::before, section.services .title::after {
+  background-color: orange;
+}
+section.services .services-content {
+  padding-top: 23px;
+}
+section.services .services-content .cards {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+section.services .services-content .cards .card-content .icon {
+  color: rgb(250, 112, 133);
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+section.services .services-content .cards .card-content .card-title {
+  font-weight: bold;
   margin-bottom: 10px;
 }
-section.services .content .cards .card .card-body h5 {
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
-}
-section.services .content .cards .card .card-body p {
-  color: rgb(113, 111, 111);
-  font-size: 15px;
-}
-section.services .content .image img {
-  border-radius: 50px;
-  width: 300px;
+section.services .services-content .cards .card-content p {
+  color: #878686;
 }
 section.tour {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #fcf7f7;
 }
+section.tour .title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  border-color: rgb(250, 112, 133);
+}
+section.tour .title::after, section.tour .title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.tour .title::after {
+  left: -30px;
+}
+section.tour .title::before {
+  right: -30px;
+}
+section.tour .title::before, section.tour .title::after {
+  background-color: orange;
+}
 section.tour .tour-content {
-  margin-left: 90px;
+  padding-top: 23px;
 }
 section.tour .tour-content .card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -22207,39 +22427,72 @@ section.tour .tour-content .card .card-body .price {
   top: 0px;
 }
 section.tour .tour-content .card .card-body .btn {
-  border: 1px solid rgb(252, 153, 168);
-  background-color: rgb(252, 153, 168);
+  border: 1px solid rgb(250, 112, 133);
+  background-color: rgb(250, 112, 133);
   padding: 10px 10px;
   color: white;
   border-radius: 10px;
 }
 section.tour .tour-content .card .card-body .btn:hover {
   background-color: white;
-  color: rgb(252, 153, 168);
+  color: rgb(250, 112, 133);
 }
 section.contact {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-section.contact .map iframe {
+section.contact .title {
+  width: fit-content;
+  border: 2px solid black;
+  position: relative;
+  margin: 0px auto 60px;
+  font-size: 36px;
+  padding: 10px 20px;
+  border-color: rgb(250, 112, 133);
+}
+section.contact .title::after, section.contact .title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.contact .title::after {
+  left: -30px;
+}
+section.contact .title::before {
+  right: -30px;
+}
+section.contact .title::before, section.contact .title::after {
+  background-color: orange;
+}
+section.contact .contact-content {
+  padding-top: 23px;
+}
+section.contact .contact-content .map iframe {
   width: 90%;
   height: 200px;
 }
-section.contact .contact-info .icon {
+section.contact .contact-content .contact-info .icon {
   color: orange;
   padding-left: 10px;
   font-size: 20px;
 }
-section.contact .contact-info span {
+section.contact .contact-content .contact-info span {
   font-weight: bold;
   font-size: 20px;
 }
 section.contact .form-contact {
   width: 60%;
   margin: 20px auto;
+  padding-top: 19px;
 }
-section.contact .form-contact .input, section.contact .form-contact textarea {
-  background-color: #eee;
+section.contact .form-contact .form-control:focus {
+  border-color: rgb(250, 112, 133) !important;
+  box-shadow: none !important;
 }
 section.contact .form-contact .input::placeholder, section.contact .form-contact textarea::placeholder {
   text-align: right;
@@ -22261,6 +22514,7 @@ section.contact .form-contact .btn button {
   padding: 10px 30px;
   position: absolute;
   left: 10px;
+  font-size: 20px;
 }
 section.contact .form-contact .btn button:hover {
   background-color: white;
@@ -22281,7 +22535,7 @@ footer .icon {
   transition: all 0.5s ease;
 }
 footer .icon:hover {
-  background-color: rgb(252, 153, 168);
+  background-color: rgb(250, 112, 133);
   color: black;
 }
 footer .copyright p {
@@ -22290,7 +22544,7 @@ footer .copyright p {
   text-align: left;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-nav {
     padding-top: 12px;
   }
@@ -22300,12 +22554,8 @@ footer .copyright p {
   .navbar-nav .nav-item .nav-link.active {
     border-bottom: none !important;
   }
-  section.services .content .cards {
-    text-align: center;
-    margin: 0px 19px 15px;
-  }
-  section.services .content .image img {
-    display: none;
+  .navbar-nav .btn-one {
+    width: fit-content;
   }
   section.tour .tour-content {
     margin-left: 20px;
@@ -22317,18 +22567,47 @@ footer .copyright p {
     width: 90%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   section.about .overlay .context h2 {
-    font-size: 25px !important;
+    font-size: 30px !important;
   }
   section.about .overlay .context p {
-    font-size: 16px !important;
-  }
-  section.services .cards .card {
-    margin: 0px auto;
+    font-size: 18px !important;
   }
   section.tour .tour-content .card {
     margin: 15px auto;
+  }
+  section.contact .contact-content .contact-info {
+    padding-top: 15px;
+  }
+  section.services .title, section.tour .title, section.content .title {
+    width: fit-content;
+    border: 2px solid black;
+    position: relative;
+    margin: 0px auto 60px;
+    font-size: 36px;
+    padding: 10px 20px;
+    font-size: 30px;
+    border-color: rgb(250, 112, 133);
+  }
+  section.services .title::after, section.services .title::before, section.tour .title::after, section.tour .title::before, section.content .title::after, section.content .title::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  section.services .title::after, section.tour .title::after, section.content .title::after {
+    left: -30px;
+  }
+  section.services .title::before, section.tour .title::before, section.content .title::before {
+    right: -30px;
+  }
+  section.services .title::before, section.services .title::after, section.tour .title::before, section.tour .title::after, section.content .title::before, section.content .title::after {
+    background-color: orange;
   }
   footer {
     text-align: center;

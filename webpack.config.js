@@ -100,6 +100,10 @@ module.exports = {
       template:"./src/index.html",
       filename:"index.html",
     }),
+    new HtmlWebpackPlugin({
+      template:"./src/tour.html",
+      filename:"tour.html",
+    }),
 
     new HtmlWebpackPlugin({
       template:"./src/tourOne.html",
@@ -124,10 +128,6 @@ module.exports = {
       filename:"css/style.css",
     }),
 
-  //     new webpack.ProvidePlugin({
-  //     $: "jquery",
-  //     jQuery: "jquery"
-  // }),
    
   ],
   

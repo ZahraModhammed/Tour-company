@@ -1,8 +1,9 @@
-@import "./variuable.scss";
-@import "./mixies.scss";
+@import "./variable";
+@import "./mixies";
 @import "./tourOne.scss";
 @import "./tourTwo.scss";
 @import "./sign.scss";
+@import "./tour.scss";
 
 @font-face{
     font-family:"cario";
@@ -15,23 +16,8 @@ body{
     margin: 0;
 }
 
-.title{
-    text-align: center;
-    font-size: 39px;
-    color: black;
-    position: relative;
-    margin-bottom: 80px;
-}
 
-.title::after{
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 3px;
-    background-color: $btn-color;
-    top:59px;
-    left:48%;
-}
+
 
 .navbar{
     border-bottom: 1px solid #eee;
@@ -44,7 +30,6 @@ body{
 
         span{
             color: $main-color;
-            font-weight: bold;
             font-size: 30px;
         }
     }
@@ -74,11 +59,25 @@ body{
             }
         }
 
-        .btn{
-            @include button($main-color, $second-color, $main-color) 
+        .btn-one{
+            @include button($main-color, $second-color, $main-color);
+            text-decoration: none; 
         }
     }
 }
+
+    #Up{
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        border: none;
+        padding: 20px;
+        background-color: $btn-color;
+        color: $second-color;
+        display: none;
+        z-index: 2;
+     }
+ 
 
 
 section{
@@ -88,7 +87,7 @@ section{
             background-position:center center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 400px;
+            height: 450px;
 
             .overlay{
               width: 100%;
@@ -122,43 +121,39 @@ section{
     &.services{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
-       .content{
-        .cards{
-            margin-bottom: 19px;
-            .card{
-                border-radius: 16px;
-                 transition: all 0.5s ease;
-                .card-body{
-                    padding: 25px;
-                    
-                    .icon{
-                        color: $main-color;
-                        font-size: 29px;
-                        margin-bottom: 10px;
-                        
-                    }
-                    h5{
-                        color: black;
-                        font-size: 20px;
-                        font-weight: bold;
-                    }
+        .title{
+            @include title-tour;
+            border-color: $main-color;
+            &::before,&::after{
+                background-color: $btn-color;
+            }
+        }
+        .services-content{
+            padding-top: 23px;
+          .cards{
+            margin-left: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            .card-content{
+                .icon{
+                    color:$main-color;
+                    margin-bottom: 10px;
+                    font-size: 27px;
+                }
+                .card-title{
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
 
-                    p{
-                        color: rgb(113, 111, 111); 
-                        font-size: 15px;
-                    }
-
-                   
+                p{
+                    color:#878686;
                 }
             }
-        }
+          }
        
-        .image{
-             img{
-                 border-radius: 50px;
-                width:300px; 
-            }
-        }
          
        }
     }
@@ -167,8 +162,16 @@ section{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
         background-color: #fcf7f7;
+        .title{
+            @include title-tour;
+            border-color: $main-color;
+            &::before,&::after{
+                background-color: $btn-color;
+            }
+        }
        .tour-content{
-        margin-left: 90px;
+        // margin-left: 90px;
+        padding-top: 23px;
           .card{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             transition: all 0.5s ease;
@@ -205,6 +208,15 @@ section{
     &.contact{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
+        .title{
+            @include title-tour;
+            border-color: $main-color;
+            &::before,&::after{
+                background-color: $btn-color;
+            }
+        }
+          .contact-content{
+            padding-top: 23px;
             .map{
                 iframe{
                     width: 90%;
@@ -222,12 +234,20 @@ section{
                     font-size: 20px;
                 }
              } 
+          }
+           
        
         .form-contact{
              width:60%;
               margin: 20px auto;
+              padding-top: 19px;
+              .form-control{
+                &:focus{
+                 border-color: $main-color !important;
+                 box-shadow: none !important;
+                }
+              }
             .input,textarea{
-                background-color: #eee;
                 &::placeholder{
                     text-align: right;
                     font-size: 20px;
@@ -244,6 +264,7 @@ section{
                     padding: 10px 30px;
                     position: absolute;
                     left: 10px;
+                    font-size: 20px;
                  }
             }
             
@@ -280,7 +301,7 @@ footer{
      } 
 }
 
-@media (max-width: 992px){
+@media (max-width: 991px){
     .navbar-nav{
         padding-top: 12px;
         .nav-item{
@@ -292,25 +313,12 @@ footer{
                  }
             }
         }
-        
+        .btn-one{
+            width: fit-content;
+        }
     }
 
     section{
-        &.services{
-            .content{
-              
-                .cards{
-                    text-align: center;
-                    margin: 0px 19px 15px;
-                }
-                 
-                .image{
-                    img{
-                       display: none; 
-                   }
-               }
-            }
-        }
 
         &.tour{
            .tour-content{
@@ -332,36 +340,48 @@ footer{
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
  section{
     &.about{
      .overlay{
           .context{
           h2{
           
-            font-size: 25px !important;
+            font-size: 30px !important;
            }
 
          p{
-            font-size: 16px !important;  
+            font-size: 18px !important;  
          }
 
         }
       }
    }
-   &.services{
-    .cards{
-        .card{
-            margin: 0px auto;
-        }
-    }
-   }
-
+  
    &.tour{
     .tour-content{
         .card{
             margin: 15px auto;
         } 
+    }
+   }
+
+   &.contact{
+    .contact-content{
+        .contact-info{
+            padding-top: 15px;
+        }
+    }
+   }
+
+   &.services,&.tour,&.content{
+    .title{
+        @include title-tour;
+        font-size: 30px;
+        border-color: $main-color;
+            &::before,&::after{
+                background-color: $btn-color;
+        }
     }
    }
  

@@ -9,7 +9,7 @@ import '@fortawesome/fontawesome-free/js/all';
 import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination,Autoplay} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -33,7 +33,7 @@ var year = document.getElementById("year").innerHTML = new Date().getFullYear();
 
 var $ = require('jquery');
 
-var up = document.getElementById("#Up")
+
 
 $(document).ready(function(){
     $(".more").hide();
@@ -63,15 +63,18 @@ $(document).ready(function(){
    
 })
 
-const mql = window.matchMedia("(max-width:992px)");
+const mql = window.matchMedia("(max-width:991px)");
    
 const changeslide = (slide) =>{
   
   const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination,Autoplay],
     slidesPerView: slide,
     spaceBetween: 30,
-    autoplay:true,
+    autoplay: {
+      delay: 2500,
+    },
+    
      loop:true,
     pagination: {
       el: ".swiper-pagination",
