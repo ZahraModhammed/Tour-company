@@ -58,7 +58,8 @@ section{
               line-height: 1.6;
             }
             #Btn{
-              @include button($title-color,$second-color,$title-color)
+              @include button($title-color,$second-color,$title-color);
+              cursor: pointer;
             }
         }
         .image-dec{

@@ -21759,6 +21759,7 @@ section.tour-descrtion .tour-info #Btn {
   padding: 10px 10px;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 section.tour-descrtion .tour-info #Btn:hover {
   background-color: white;
@@ -22161,7 +22162,7 @@ section.travel-tour-landing .overlay .tour-content {
 }
 section.travel-tour-landing .overlay .tour-content p {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }
 section.travel-tours {
   padding-top: 100px;
@@ -22262,6 +22263,7 @@ body {
   color: white;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 .navbar .navbar-nav .btn-one:hover {
   background-color: white;
