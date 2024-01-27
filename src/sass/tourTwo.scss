@@ -1,8 +1,10 @@
+// colors of tourTwo pages
 $color-title-two: rgb(114, 248, 114);
 $color-line-two:rgb(255, 65, 97); 
 
 section{
-    &.tour-two-landing{
+     // tour-landingTwo styles
+    &.tour-landingTwo{
        background-image: url(../images/gallery-t3.jpg);
        background-position: center center;
        background-repeat: no-repeat;
@@ -13,7 +15,7 @@ section{
         width: 100%;
         height: 100%;
         position: relative;
-        .landing-two-content{
+        .landing-content-two{
             position: absolute;
             right: 50%;
             top: 50%;
@@ -26,11 +28,11 @@ section{
           }
        }
     }
-
-    &.tour-dec{
+     // tour-descrtionTwo styles
+    &.tour-descrtionTwo{
         padding-top: $sec-pb;
         padding-bottom: $sec-pb;
-        .tour-two-info{
+        .tour-info-two{
             background-color: white;
             padding: 30px;
             border:1px solid #eee;
@@ -62,7 +64,7 @@ section{
              }
         }
 
-        .image{
+        .image-dec-two{
              position: relative;
              text-align: center;
              &::before{
@@ -72,7 +74,7 @@ section{
                 height: calc(100% + 100px);
                 z-index: -1;
                 background-color: $color-title-two;
-                left: 0;
+                left: 90px;
                 top: -50px;
              }
             img{
@@ -82,8 +84,8 @@ section{
         }
 
     }
-
-    &.tour-place{
+    // tour-places styles
+    &.tour-places{
         padding-top: $sec-pt;
         padding-bottom:$sec-pb;
         background-color: #f9f7f7;
@@ -118,10 +120,11 @@ section{
             }
         
     }
-
+    //  gallery-tour-two styles
     &.gallery-tour-two{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
+        //  tour-title styles
         .tour-title{
             @include title-tour;
             border-color: $color-title-two;
@@ -129,6 +132,7 @@ section{
                 background-color: $color-line-two;
             }
          }
+          // swiper styles
         .swiper {
             width: 100%;
             height: 100%;
@@ -162,19 +166,22 @@ section{
 
 @media(max-width:991px){
     section{
-        &.tour-dec{
-            .image{
+        &.tour-descrtionTwo{
+            // style to hide img
+            .image-dec-two{
                 display: none;
             } 
         }
 
-        &.tour-place{
+        &.tour-places{
+            // style to make matgin between cards
             .content-place{
                 margin-bottom: 15px;
             } 
         }
 
         &.gallery-tour-two{
+             //  style to make images in swiper carousel small
             .swiper {
                 width: 70%;
                 height: 70%;
@@ -185,17 +192,19 @@ section{
 
 @media(max-width:767px){
     section{
-    &.tour-two-landing{
+    &.tour-landingTwo{
      .overlay{
-         .landing-two-content{
+         .landing-content-two{
+              //  style to make the font-size small
                 h3{
-                  font-size: 30px;
+                  font-size: 35px;
                  }
               }
             }
          }
     &.gallery-tour-two,&.tour-place{
         .tour-title{
+            //  style to make the font-size small
             @include title-tour;
             border-color: $color-title-two;
             font-size: 30px;

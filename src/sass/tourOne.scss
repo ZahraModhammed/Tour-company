@@ -1,10 +1,11 @@
-
+// colors of tourOne  page
 $title-color: #4b320f;
 $line-color:#f8ef42;
 
 
 section{
-    &.tour-landing{
+    // tour-landingOne styles
+    &.tour-landingOne{
         background-image: url('../images/gallery-c5.jpg');
         background-position: center center;
         background-repeat: no-repeat;
@@ -15,7 +16,7 @@ section{
          width: 100%;
          height: 100%;
          position: relative;
-         .landing-content{
+         .landing-content-one{
             position: absolute;
             right: 50%;
             top: 50%;
@@ -28,10 +29,12 @@ section{
        }
     }
     }
-    &.tour-descrtion{
+
+    // tour-descrtionOne styles
+    &.tour-descrtionOne{
         padding-top: 100px;
         padding-bottom: 50px;
-        .tour-info{
+        .tour-info-one{
           background-color: white;
           padding: 30px;
           border:1px solid #eee;
@@ -62,7 +65,7 @@ section{
               cursor: pointer;
             }
         }
-        .image-dec{
+        .image-dec-one{
           position: relative;
           text-align: center;
           &::before{
@@ -72,7 +75,7 @@ section{
              height: calc(100% + 100px);
              z-index: -1;
              background-color: $title-color;
-             left: 0;
+             left: 90px;
              top: -50px;
             
           }
@@ -82,11 +85,11 @@ section{
         }
       } 
     }
-
-    &.gallery-tour{
+    // gallery-tour-one styles 
+    &.gallery-tour-one{
       padding-top: 100px;
       padding-bottom: 100px;
-
+      //  tour-title styles
       .tour-title{
         @include title-tour;
         border-color: $title-color;
@@ -94,7 +97,7 @@ section{
             background-color: $line-color;
         }
      }
-     
+      // swiper styles
       .swiper {
         width: 100%;
         height: 100%;
@@ -125,13 +128,15 @@ section{
 
 @media(max-width:991px){
    section{
-    &.tour-descrtion{
-      .image-dec{
+    &.tour-descrtionOne{
+      // style to hide img 
+      .image-dec-one{
         display: none;
       }
     }
      
-    &.gallery-tour{
+    &.gallery-tour-one{
+      //  style to make the font-size small
       .tour-title{
         @include title-tour;
         border-color: $title-color;
@@ -140,6 +145,8 @@ section{
             background-color: $line-color;
         }
      }
+
+    //  style to make images in swiper carousel small
      .swiper{
       width: 70%;
       height: 70%;
@@ -153,9 +160,10 @@ section{
 @media(max-width:767px){
 
   section{
-    &.tour-landing{
+    &.tour-landingOne{
       .overlay{
-        .landing-content{
+        //  style to make the font-size small
+        .landing-content-one{
         
           h3{
             font-size: 30px;

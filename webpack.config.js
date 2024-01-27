@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
 
 
@@ -25,6 +26,11 @@ module.exports = {
       }
   },
 
+  performance: {
+    hints: false,
+     maxAssetSize: 100000,
+       maxEntrypointSize: 400000,
+  },
   
   resolve: {
     alias: {
@@ -33,10 +39,6 @@ module.exports = {
 },
 
   module:{
-  
-      
-    
-
     rules:[
         {
             test: /\.html$/i,
@@ -48,10 +50,6 @@ module.exports = {
           },
 
           
-           
-            
-          
-
           {
             test:  /\.(sass|css|scss)$/,
            
@@ -71,8 +69,8 @@ module.exports = {
         {
           test: /\.(png|jpe?g|gif)$/i,
           type: 'asset/resource',
-  
           generator: {
+          
             filename: 'images/[name].[ext]',
           },
         },
@@ -92,6 +90,8 @@ module.exports = {
 
   
   },
+
+
 
   plugins: [
   
@@ -128,8 +128,9 @@ module.exports = {
       filename:"css/style.css",
     }),
 
-   
+    new CssMinimizerPlugin(),
+
   ],
   
-  
+ 
 }

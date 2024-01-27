@@ -1,31 +1,35 @@
 
 section{
-    &.travel-tour-landing{
+    // tour-landing styles
+    &.tour-landing{
         background-image: url('../images/landing-2.jpg');
-        background-position: center center;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 400px; 
+        height: 290px; 
         .overlay{
             background-color: rgba($color: #000000, $alpha: 0.5);
             width: 100%;
             height: 100%;
             position: relative;
-            .tour-content{
+            .tour-landing-content{
                 position: absolute;
                 right: 50%;
                 top: 50%;
                 transform: translate(50%,-50%);
                 text-align: center;
-                p{
+                h3{
                     color: $second-color;
-                    font-size: 25px;
+                    font-size: 40px;
+                  
                 }
             }
         }
     }
 
-    &.travel-tours{
+    // tour-cards styles
+
+    &.tour-cards{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
         .card{
@@ -48,8 +52,8 @@ section{
                 }
                .price{
                   position: absolute;
-                  border: 1px solid $btn-color;
-                  background-color: $btn-color;
+                  border: 1px solid $main-color;
+                  background-color: $main-color;
                   color:$second-color;
                    font-size: 20px;
                   padding: 10px;
@@ -58,7 +62,7 @@ section{
                 }
 
                 .btn{
-                    @include button($main-color, $second-color,$main-color)
+                    @include button($btn-color, $second-color,$btn-color)
                 }
             }
           }
@@ -69,9 +73,12 @@ section{
 
 @media(max-width:767px){
     section{
-        &.travel-tours{
+        &.tour-cards{
             .card{
-                margin: 0px auto 15px;
+                margin: 0px auto 19px;
+                &:hover{
+                    transform:translateY(0px);
+                }
             }
         }
     }

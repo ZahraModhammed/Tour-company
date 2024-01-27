@@ -1,6 +1,5 @@
 import '@laylazi/bootstrap-rtl/dist/js/bootstrap.min.js';
-import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
-import '../../node_modules/bootstrap/dist/js/bootstrap';
+import '../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import  '../../node_modules/jquery/dist/jquery';
 import "popper.js/dist/popper";
@@ -13,12 +12,11 @@ import { Navigation, Pagination,Autoplay} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+// import { validate } from 'webpack';
 
 
-
+//loop for move between nav links elements
 var link = document.querySelectorAll(".nav-link");
-
-
 link.forEach(function (el){
     el.onclick = function(){
         link.forEach(function(ele){
@@ -27,15 +25,19 @@ link.forEach(function (el){
         this.classList.add("active")
     }
 });
-
+ 
+// bring the current year
 var year = document.getElementById("year").innerHTML = new Date().getFullYear();
 
 
-var $ = require('jquery');
 
 
+
+  // jQuery function
+  var $ = require('jquery');
 
 $(document).ready(function(){
+    // hide and show text
     $(".more").hide();
     $("#Btn").click(function(){
         if($(".more").is(":hidden") == true ){
@@ -49,6 +51,7 @@ $(document).ready(function(){
         }
     });
     
+    // scroll Top function
     $(window).scroll(function(){
         if($(this).scrollTop() >= 200){
             $("#Up").show();
@@ -63,6 +66,7 @@ $(document).ready(function(){
    
 })
 
+// swiper code to move between images gallery
 const mql = window.matchMedia("(max-width:991px)");
    
 const changeslide = (slide) =>{
@@ -98,7 +102,7 @@ mql.onchange = (e) =>{
   changeview(e);
 }
     
-    
+// function for validate form
 
 (() => {
   'use strict'

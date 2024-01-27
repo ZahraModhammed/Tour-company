@@ -1,3 +1,4 @@
+// SCSS files
 @import "./variable";
 @import "./mixies";
 @import "./tourOne.scss";
@@ -5,11 +6,12 @@
 @import "./sign.scss";
 @import "./tour.scss";
 
+// the font that I use in the pages
 @font-face{
     font-family:"cario";
     src:url('../font/Cairo-Regular.ttf');
 }
-
+//  body styles
 body{
     font-family: "cario";
     padding: 0;
@@ -18,10 +20,10 @@ body{
 
 
 
-
+// navbar styles
 .navbar{
     border-bottom: 1px solid #eee;
-    padding: 8px 16px;
+    padding: 6px 16px;
      box-shadow: 1px 2px 1px 0px #eee;
     .navbar-brand{
         img{
@@ -66,7 +68,7 @@ body{
         }
     }
 }
-
+//    the button styles
     #Up{
         position: fixed;
         bottom: 15px;
@@ -82,44 +84,58 @@ body{
 
 
 section{
-    &.about{
-        .landing{
+    // landing styles
+     &.landing{
             background-image: url('../images/landing-1.jpg ');
-            background-position:center center;
+            background-position:center ;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 450px;
+            
+          .overlay{
+           background-color: rgba(0, 0, 0, 0.3);
+            height: 499px;
+            // carousel styles
+            #carouselExampleCaptions{
+                .carousel-item{
+                   height: 499px;
+                    position: relative;
+                    .content{
+                        position: absolute;
+                        top: 35%;
+                        right: 15%;
+                        left: 15%;
+                        text-align: center !important;
+                        z-index: 1;
+                        h2{
+                            color: $second-color;
+                            font-size: 40px;
+                            margin-bottom: 10px;
+                        }
 
-            .overlay{
-              width: 100%;
-              height: 100%;
-              background-color: rgba($color: #000000, $alpha: 0.3); 
-              position: relative;
-              .context{
-                position: absolute;
-                right: 50%;
-                top: 50%;
-                transform: translate(50%,-50%);
-                text-align: center;
-                h2{
-                    color: $second-color;
-                    font-size: 40px;
+                        p{
+                            color: $second-color;
+                            font-size: 19px; 
+                        }
+
+                        .btn{
+                            @include button($btn-color,$second-color,$btn-color);
+                            border-radius: 10px;
+                            font-size: 19px;
+                            padding: 10px;
+                        }
+                    }
                 }
-
-                p{
-                    color: $second-color;
-                    font-size: 19px;
-                    line-height: 1.5;
+                .carousel-control-next,
+                .carousel-control-prev{
+                     font-size: 30px;
+                       
                 }
-
-              }
             }
-
-        }
-        
-    }
-
-    &.services{
+          } 
+          
+      }
+    //   services styles
+     &.services{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
         .title{
@@ -158,7 +174,7 @@ section{
          
        }
     }
-
+    // tour styles
     &.tour{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
@@ -188,8 +204,8 @@ section{
                 }
                .price{
                   position: absolute;
-                  border: 1px solid $btn-color;
-                  background-color: $btn-color;
+                  border: 1px solid $main-color;
+                  background-color: $main-color;
                   color:$second-color;
                    font-size: 20px;
                   padding: 10px;
@@ -198,13 +214,13 @@ section{
                 }
 
                 .btn{
-                    @include button($main-color, $second-color,$main-color)
+                    @include button($btn-color, $second-color,$btn-color)
                 }
             }
           }
        }
     }
-
+    // contact styles
     &.contact{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
@@ -274,6 +290,8 @@ section{
 
 }
 
+// footer styles
+
 footer{
         width:100%;
         background-color: #000000;
@@ -301,6 +319,7 @@ footer{
      } 
 }
 
+// MEDIA QUERY
 @media (max-width: 991px){
     .navbar-nav{
         padding-top: 12px;
@@ -320,11 +339,6 @@ footer{
 
     section{
 
-        &.tour{
-           .tour-content{
-            margin-left: 20px;
-          }  
-        }
 
         &.contact{
             .map{
@@ -342,26 +356,30 @@ footer{
 
 @media (max-width: 767px){
  section{
-    &.about{
-     .overlay{
-          .context{
-          h2{
-          
-            font-size: 30px !important;
-           }
-
-         p{
-            font-size: 18px !important;  
-         }
-
-        }
-      }
-   }
+    &.landing{
+        .overlay{
+            #carouselExampleCaptions{
+                .carousel-item{
+                    .content{
+                        h2{
+                            font-size: 30px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            } 
+        } 
+    }
   
    &.tour{
     .tour-content{
         .card{
             margin: 15px auto;
+            &:hover{
+                transform:translateY(0px);
+            }
         } 
     }
    }
@@ -374,7 +392,7 @@ footer{
     }
    }
 
-   &.services,&.tour,&.content{
+   &.services,&.tour,&.contact{
     .title{
         @include title-tour;
         font-size: 30px;
