@@ -70,9 +70,20 @@ section{
 }
 
 
-
+// Media queries
 @media(max-width:767px){
     section{
+        
+        &.tour-landing{
+            .overlay{
+              .tour-landing-content{
+                h3{
+                    font-size: 30px;
+                }
+              }  
+            }
+        }
+
         &.tour-cards{
             .card{
                 margin: 0px auto 19px;

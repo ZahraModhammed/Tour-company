@@ -9,7 +9,7 @@ section{
        background-position: center center;
        background-repeat: no-repeat;
        background-size: cover;
-       height: 400px;
+       height: 300px;
        .overlay{
         background-color: rgba($color: #000000, $alpha: 0.5);
         width: 100%;
@@ -46,7 +46,7 @@ section{
                 &::after{
                   content: "";
                   position: absolute;
-                  width: 150px;
+                  width: 145px;
                   height: 4px;
                   background-color: $color-line-two;
                   bottom: -9px;
@@ -164,6 +164,8 @@ section{
    
 }
 
+// Media queries
+
 @media(max-width:991px){
     section{
         &.tour-descrtionTwo{
@@ -197,7 +199,7 @@ section{
          .landing-content-two{
               //  style to make the font-size small
                 h3{
-                  font-size: 35px;
+                  font-size: 30px;
                  }
               }
             }
