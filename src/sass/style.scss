@@ -236,7 +236,7 @@ section{
             .map{
                 iframe{
                     width: 90%;
-                     height:200px;
+                     height:300px;
                 }
             }
              .contact-info{
@@ -254,8 +254,8 @@ section{
            
        
         .form-contact{
-             width:60%;
-              margin: 20px auto;
+            //  width:60%;
+            //   margin: 20px auto;
               padding-top: 19px;
               .form-control{
                 &:focus{
