@@ -254,8 +254,6 @@ section{
            
        
         .form-contact{
-            //  width:60%;
-            //   margin: 20px auto;
               padding-top: 19px;
               .form-control{
                 &:focus{
@@ -386,8 +384,9 @@ footer{
 
    &.contact{
     .contact-content{
+        margin: 0px auto;
         .contact-info{
-            padding-top: 15px;
+            padding-top: 10px;
         }
     }
    }
