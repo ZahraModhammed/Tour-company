@@ -242,7 +242,6 @@ section{
              .contact-info{
                 .icon{
                     color: $btn-color;
-                    padding-left: 10px;
                     font-size: 20px;
                 }
                 span{
@@ -345,9 +344,6 @@ footer{
                 }
             }
 
-            .form-contact{
-                width:90%;
-            }
         }
     }
 }
@@ -384,9 +380,13 @@ footer{
 
    &.contact{
     .contact-content{
-        margin: 0px auto;
+        .map{
+            text-align: center;
+        }
+       
         .contact-info{
             padding-top: 10px;
+            padding-right:15px;
         }
     }
    }
