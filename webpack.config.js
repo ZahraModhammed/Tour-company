@@ -20,7 +20,7 @@ module.exports = {
     },
     hot: false,
     open: true,
-    port: 9000,
+    port: 5000,
     devMiddleware:{
         writeToDisk: true,
       }

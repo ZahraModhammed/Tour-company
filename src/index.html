@@ -75,13 +75,15 @@
 
         <!-- services-section -->
         <section class="services" id="services">
-          <div class="container">
+         
                 <h3 class="title">
                     خدمانتا
                 </h3>
+                <div class="container">
                   <div class=" services-content">
+                    
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-6 col-lg-3">
                             <div class="cards">
                               <div class="card-content">
                                 <i class="fa-solid fa-house icon"></i>
@@ -90,7 +92,7 @@
                               </div>
                              </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-6 col-lg-3">
                             <div class="cards">
                               <div class="card-content">
                                 <i class="fa-solid fa-car-side icon"></i>
@@ -99,7 +101,7 @@
                               </div>
                              </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-6 col-lg-3">
                             <div class="cards">
                               <div class="card-content">
                                 <i class="fa-solid fa-cart-flatbed-suitcase icon"></i>
@@ -108,7 +110,7 @@
                               </div>
                              </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-6 col-lg-3">
                             <div class="cards">
                               <div class="card-content">
                                  <i class="fa-solid fa-location-dot icon"></i>
@@ -125,46 +127,53 @@
 
         <!-- tour-section -->
        <section class="tour">
-          <div class="container">
             <h3 class="title">
               الجولات السياحية
             </h3>
-            <div class="tour-content">
+            <div class="container">
               <div class="row">
-                <div class="col-md-6 d-flex justify-content-center">
-                  <div class="card" style="width: 20rem;">
-                    <img src="images/tour-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="clearfix">
-                          <h5 class="card-title float-right">رحلة الى الاهرامات في مصر</h5>
-                          <p class=" price float-left">3000$</p>
-                        </div>
-                        <a href="tourOne.html" class="btn mt-3">
-                           تفاصيل الرحلة
-                        </a>
+                <div class="col-lg-4 col-md-6">
+                  <div class="tour-content">
+                    <img class="tour-img" src="./images/tour-2.jpg" alt="">
+                    <div class="text">
+                        <h4>رحلة الى مصر</h4>
+                        <span class="d-block price">3000$</span>
+                      <a href="tourOne.html" class="btns">تفاصيل الرحلة</a>
                     </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="tour-content">
+                  <img class="tour-img" src="./images/tour-1.jpg" alt="">
+                  <div class="text">
+                      <h4>رحلة الى تركيا</h4>
+                      <span class="d-block price">3000$</span>
+                    <a href="tourTwo.html" class="btns">تفاصيل الرحلة</a>
                   </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center">
-                  <div class="card" style="width: 20rem;">
-                    <img src="images/tour-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="clearfix">
-                          <h5 class="card-title float-right">رحلة إلى مدينة إسطنبول في تركيا</h5>
-                          <p class=" price float-left">6000$</p>
-                        </div>
-                        <a href="tourTwo.html" class="btn mt-3">
-                           تفاصيل الرحلة
-                        </a>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="tour-content">
+                <img class="tour-img" src="./images/img-tour5.jpg" alt="">
+                <div class="text">
+                    <h4>رحلة الى كوريا </h4>
+                    <span class="d-block price">3000$</span>
+                  <a href="tour.html" class="btns">تفاصيل الرحلة</a>
                 </div>
               </div>
-            </div>
+          </div>
+             </div>  
+             </div>  
           </div>
         </div>
        </section>
     <!-- the end of tour section -->
+     <section class="ad">
+      <div class="ad-content">
+         <h3>يمكنك رؤية المزيد من الجولات السياحية</h3>
+         <a href="tour.html" class="ad-btn">للمزيد</a>
+      </div>
+     </section>
 
          <!-- contact section -->
         <section class="contact" id="contact">
@@ -192,16 +201,16 @@
                       </p>
                    </div>
                   </div>
-                  <div class="col-lg-6 col-12">
+                  <div class="col-lg-6 col-12 ">
                     <form action="" class="row form-contact">
-                      <div class="col-md-6 mb-3">
+                      <div class="col-lg-12 mb-3">
                           <input type="text" class="form-control input" id="inputOne" placeholder="الاسم الكامل">
                       </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-lg-12 mb-3">
                           <input type="email" class="form-control input" id="inputTwo" placeholder="البريد الالكتروني">
                         </div>
                       <div class="col-12 mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="الرسالة"></textarea>
+                        <textarea class="form-control input" id="exampleFormControlTextarea1" rows="3" placeholder="الرسالة"></textarea>
                       </div>
                         <div class="mb-3 btn">
                         <button type="submit">ارسال</button>
@@ -209,8 +218,9 @@
                       </form>
                   </div>
                 </div>
-               
+                
             </div>
+           
         </section>
          <!-- the end of contact section -->
     </main>

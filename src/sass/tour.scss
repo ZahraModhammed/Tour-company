@@ -32,40 +32,87 @@ section{
     &.tour-cards{
         padding-top: $sec-pt;
         padding-bottom: $sec-pb;
-        .card{
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            transition: all 0.5s ease;
-            margin-bottom: 30px;
-            img{
-                height: 260px;
+        // .card{
+        //     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        //     transition: all 0.5s ease;
+        //     margin-bottom: 30px;
+        //     img{
+        //         height: 260px;
+        //     }
+        //     &:hover{
+        //         transform:translateY(-19px);
+        //     }
+        //     .card-body{
+        //         padding: 27px;
+        //         position: relative;
+        //         .card-title{
+        //           font-size: 20px;
+        //           color: black;
+        //           margin-top: 28px;
+        //         }
+        //        .price{
+        //           position: absolute;
+        //           border: 1px solid $main-color;
+        //           background-color: $main-color;
+        //           color:$second-color;
+        //            font-size: 20px;
+        //           padding: 10px;
+        //           left: 25px;
+        //           top: 0px;
+        //         }
+
+        //         .btn{
+        //             @include button($btn-color, $second-color,$btn-color)
+        //         }
+        //     }
+        //   }
+          .tour-content{
+            position: relative;
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px  15px ;
+            margin-bottom: 15px;
+            .tour-img{
+                max-width: 100%;
+                height: 450px;
+                width: 450px;
+              
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
-            &:hover{
-                transform:translateY(-19px);
-            }
-            .card-body{
-                padding: 27px;
-                position: relative;
-                .card-title{
-                  font-size: 20px;
-                  color: black;
-                  margin-top: 28px;
+            .text{
+                position: absolute;
+                bottom: 0px;
+                background-color:rgba(0, 0, 0, 70%);
+                border: 1px solid black;
+                padding: 10px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                h4{
+                    color: $second-color;
                 }
                .price{
-                  position: absolute;
-                  border: 1px solid $main-color;
-                  background-color: $main-color;
-                  color:$second-color;
-                   font-size: 20px;
-                  padding: 10px;
-                  left: 25px;
-                  top: 0px;
-                }
-
-                .btn{
-                    @include button($btn-color, $second-color,$btn-color)
-                }
+                font-weight: bold;
+                color: $main-color;
+                margin-bottom: 10px;
+                font-size: 22px;
+               }
+               .btns{
+                text-decoration: none !important;
+                 border: 1px solid $btn-color;
+                 padding: 9px;
+                 display: block;
+                 background-color: $btn-color;
+                 color: $second-color; 
+                 transition: 0.3s;
+                 &:hover{
+                    background-color: hsl(39, 100%, 45%);
+                 }
+               }
             }
-          }
+           }
     }
 }
 
@@ -85,10 +132,12 @@ section{
         }
 
         &.tour-cards{
-            .card{
-                margin: 0px auto 19px;
-                &:hover{
-                    transform:translateY(0px);
+            .tour-content{
+                .tour-img{
+                    width: 100%;
+                    &:hover{
+                        transform: none;
+                    }
                 }
             }
         }

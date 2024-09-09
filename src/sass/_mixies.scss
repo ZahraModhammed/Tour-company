@@ -14,29 +14,12 @@
 //  mixin for titles
 @mixin title-tour{
   width: fit-content;
-  border: 2px solid black;
+  border-bottom: 3px solid black;
   position: relative;
   margin: 0px auto 60px;
-  font-size: 36px;
+  font-size: 34px;
   padding: 10px 20px;
-  &::after,&::before{
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: green;
-    border-radius: 50%;
-    top: 50%;
-   transform: translateY(-50%);
-  }
-  
-  &::after{
-      left: -30px;
-  }
-
-  &::before{
-      right: -30px;
-  }
+ 
 
  
 }
